@@ -11,14 +11,14 @@ HEADERS = {
     'Content-Type': 'application/json',
     'Origin': 'https://ai4bharat.iitm.ac.in',
     'Priority': 'u=1, i',
+    'Referer': 'https://ai4bharat.iitm.ac.in/',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Sec-CH-UA': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"',
     'Sec-CH-UA-Mobile': '?0',
     'Sec-CH-UA-Platform': '"Windows"',
     'Sec-Fetch-Dest': 'empty',
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'cross-site',
-    'Referer': 'https://ai4bharat.iitm.ac.in/',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
 }
 
