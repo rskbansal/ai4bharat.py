@@ -124,3 +124,35 @@ LANGUAGES = {
         'tts_service': None,
     }
 }
+
+ASR_DOMAINS = [
+    "general",
+    "digital_payments",
+    "bigbasket_commands",
+    "umang_commands",
+    "digilocker",
+    "passport_seva",
+    "crop_insurance",
+    "electricity_bill_payments",
+    "gas_booking",
+    "aadhaar",
+    "clothe_shopping",
+    "electronic_shopping",
+    "epfo",
+    "pan_services",
+    "pmkvy",
+    "health_services",
+    "parivahan_transport",
+    "startups",
+    "flight_booking",
+    "garbage",
+    "gst",
+    "landline_bill_payment",
+    "itr",
+    "mobile_recharge_and_bill_payment",
+    "movie_shows",
+    "nps",
+    "ors_birth_death",
+    "railway_booking",
+    "water_services"
+]
