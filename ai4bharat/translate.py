@@ -8,10 +8,10 @@ def translate(text, source_lang, target_lang):
     target_lang = target_lang.strip().lower()
 
     if LANGUAGES.get(source_lang) == None or source_lang == 'rajasthani':
-        raise LanguageError(f'Invalid source language - "{source_lang}"')
+        raise LanguageError('source', source_lang)
     if LANGUAGES.get(target_lang) == None or target_lang == 'rajasthani':
-        raise LanguageError(f'Invalid target language - "{target_lang}"')
-    
+        raise LanguageError('target', source_lang)
+
     payload = {
         'sourceLanguage': LANGUAGES[source_lang]['code'],
         'targetLanguage': LANGUAGES[target_lang]['code'],
