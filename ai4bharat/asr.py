@@ -30,8 +30,13 @@ def asr(audio_file, source_lang, domain = 'general'):
         'track': False
     }
 
-    resp = requests.post(ASR_ENDPOINT, json=payload)
-    resp = resp.json()
-    print(resp)
+    resp = requests.post(ASR_ENDPOINT, json = payload)
+    status_code = resp.status_code
 
-    return None
+    if status_code != 200:
+        raise APIError(status_code)
+    
+    resp = resp.json()
+    recognized_text = resp['output'][0]['source']
+
+    return recognized_text

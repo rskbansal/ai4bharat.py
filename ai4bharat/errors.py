@@ -7,9 +7,16 @@ class LanguageError(Exception):
         super().__init__(message)
 
 class DomainError(Exception):
-    pass
+    def __init__(self, domain):
+        message = f'Invalid domain - "{domain}"'
+        super().__init__(message)
 
 class VoiceError(Exception):
     def __init__(self, voice):
         message = f'Invalid voice - "{voice}", please chose between "male" or "female"'
+        super().__init__(message)
+
+class APIError(Exception):
+    def __init__(self, status_code):
+        message = f'An error occured, API returned status code - {status_code}'
         super().__init__(message)
