@@ -20,3 +20,8 @@ class APIError(Exception):
     def __init__(self, status_code):
         message = f'An error occured, API returned status code - {status_code}'
         super().__init__(message)
+
+class AudioError(Exception):
+    def __init__(self, sampling_rate):
+        message = f'Invalid sampling rate - {sampling_rate}, must be atleast 8000 for clear audio'
+        super().__init__(message)

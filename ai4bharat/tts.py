@@ -9,7 +9,8 @@ def tts(text, source_lang, out_file = None, voice = 'male', sampling_rate = 1600
     voice = voice.strip().lower()
     sampling_rate = int(sampling_rate)
 
-    # Handle minimum value for sampling rate
+    if sampling_rate < 8000:
+        raise AudioError(sampling_rate)
 
     if LANGUAGES.get(source_lang) == None or LANGUAGES[source_lang]['tts_service'] == None:
         raise LanguageError('source', source_lang)
