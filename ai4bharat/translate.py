@@ -22,6 +22,11 @@ def translate(text, source_lang, target_lang):
     }
 
     resp = requests.post(TRANSLATE_ENDPOINT, json=payload)
+    status_code = resp.status_code
+
+    if status_code != 200:
+        raise APIError(status_code)
+    
     resp = resp.json()
     translated_text = resp['output'][0]['target']
 
