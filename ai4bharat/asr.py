@@ -5,6 +5,16 @@ import requests
 import base64
 
 def asr(audio_file, source_lang, domain = 'general'):
+    """Automatic Speech Recognition processes the audio file and returns the recognized text.
+
+    Arguments:
+        audio_file (str): Path to the audio file.
+        source_lang (str): Language of the audio file.
+        domain (str, optional): Specific area of speech for specialized vocabulary & patterns. Defaults to 'general'.
+
+    Returns:
+        str: The recognized text.
+    """
     source_lang = source_lang.strip().lower()
     domain = domain.strip().lower()
 
