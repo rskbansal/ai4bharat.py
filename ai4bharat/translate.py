@@ -4,6 +4,16 @@ from utils import *
 import requests
 
 def translate(text, source_lang, target_lang):
+    """Translates text from one language to another.
+
+    Arguments:
+        text (str): Text to be translated.
+        source_lang (str): Language of the provided text.
+        target_lang (str): Language to which the input text is to be translated.
+
+    Returns:
+        str: The translated text.
+    """
     source_lang = source_lang.strip().lower()
     target_lang = target_lang.strip().lower()
 
