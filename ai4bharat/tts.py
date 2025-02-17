@@ -5,6 +5,18 @@ import requests
 import base64
 
 def tts(text, source_lang, out_file = None, voice = 'male', sampling_rate = 16000):
+    """Converts text to speech in the specified language and saves it in an audio file.
+
+    Arguments:
+        text (str): Text to be converted to speech.
+        source_lang (str): Language of the text.
+        out_file (str, optional): Name of the output file. Auto-generated if not specified.
+        voice (str, optional): Can be 'male' or 'female'. Defaults to 'male'.
+        sampling_rate (int, optional): Sampling rate of the audio. Defaults to 16000.
+
+    Returns:
+        None: Saves the audio file at the specified location.
+    """
     source_lang = source_lang.strip().lower()
     voice = voice.strip().lower()
     sampling_rate = int(sampling_rate)
