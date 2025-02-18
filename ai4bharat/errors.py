@@ -1,4 +1,4 @@
-from constants import *
+from .constants import *
 
 class LanguageError(Exception):
     def __init__(self, lang_origin, lang):

@@ -1,6 +1,6 @@
-from constants import *
-from errors import *
-from utils import *
+from .constants import *
+from .errors import *
+from .utils import *
 import requests
 import base64
 

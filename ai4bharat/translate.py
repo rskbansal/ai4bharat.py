@@ -1,6 +1,6 @@
-from constants import *
-from errors import *
-from utils import *
+from .constants import *
+from .errors import *
+from .utils import *
 import requests
 
 def translate(text, source_lang, target_lang):
